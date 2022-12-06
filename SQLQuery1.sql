@@ -78,8 +78,8 @@ exec usp_FindBiggerGrade 7
 --9. Funksiya yazmalı - göndərilən qrup adina uyğun neçə tələbə olduğunu göstərməlidir - 20 bal
 
 Create function dbo_FindStudentForTheGroup(@GroupName nvarchar(255) = 'P228')
-as 
 Returns table
+as
 begin
  Select  g.Name 'group name', COUNT(*) 'student count'  from Groups g
 join Students s on s.GroupId = g.Id
